@@ -8,7 +8,7 @@ import path from "path";//A core Node.js module used for handling file paths.
 //files
 
 import connectDB from "./config/db.js";
-
+import userRoutes from "./routes/userRoutes.js";
 //configuration
 
 dotenv.config() 
@@ -18,15 +18,14 @@ const app = express()
 
 //middlewares
 
-app.use(express.json)
+app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-app.use(cookieParser)
+app.use(cookieParser())
 
 const PORT =process.env.PORT || 3000 
 
 //Routes
-
-
+app.use("/api/v1/users",userRoutes);
 
 app.listen(PORT,()=>console.log(`server is running on port ${PORT}`))
 
