@@ -1,9 +1,13 @@
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
-import asyncHandler from './asyncHandler.js';
+import asyncHandler from "./asyncHandler.js";
 
+// Check if the user is authenticated or not
 const authenticate = asyncHandler(async (req, res, next) => {
-  let token = req.cookies.jwt;
+  let token;
+
+  // Read JWT from the 'jwt' cookie
+  token = req.cookies.jwt;
 
   if (token) {
     try {
@@ -16,7 +20,7 @@ const authenticate = asyncHandler(async (req, res, next) => {
     }
   } else {
     res.status(401);
-    throw new Error("Not Authorized, no token");
+    throw new Error("Not authorized, no token");
   }
 });
 
