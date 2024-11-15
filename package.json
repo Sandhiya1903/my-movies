@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-   "fullstack": "concurrently \"npm run backend\" \"npm run frontend\"",
-    "frontend": "cd frontend && npm run dev",
-    "backend": "nodemon backend/index.js"
+    "fullstack": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "nodemon backend/index.js",
+    "frontend": "cd frontend && npm run dev"
   },
   "keywords": [],
   "author": "",
