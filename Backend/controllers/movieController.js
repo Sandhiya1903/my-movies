@@ -39,9 +39,11 @@ const updateMovie = async (req, res) => {
     const updatedMovie = await Movie.findByIdAndUpdate(id, req.body, {
       new: true,
     });
+
     if (!updatedMovie) {
-      return res.status(404).json({ message: "movie not found" });
+      return res.status(404).json({ message: "Movie not found" });
     }
+
     res.json(updatedMovie);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -77,7 +79,7 @@ const movieReview = async (req, res) => {
         movie.reviews.length;
 
       await movie.save();
-      res.status(201).json({ message: "Revieew Added" });
+      res.status(201).json({ message: "Review Added" });
     } else {
       res.status(404);
       throw new Error("Movie not found");
@@ -144,6 +146,7 @@ const getNewMovies = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
 const getTopMovies = async (req, res) => {
   try {
     const topRatedMovies = await Movie.find()
@@ -154,6 +157,7 @@ const getTopMovies = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
 const getRandomMovies = async (req, res) => {
   try {
     const randomMovies = await Movie.aggregate([{ $sample: { size: 10 } }]);
@@ -166,6 +170,7 @@ const getRandomMovies = async (req, res) => {
 export {
   createMovie,
   getAllMovies,
+  getSpecificMovie,
   updateMovie,
   movieReview,
   deleteMovie,
@@ -173,5 +178,4 @@ export {
   getNewMovies,
   getTopMovies,
   getRandomMovies,
-  getSpecificMovie,
 };
