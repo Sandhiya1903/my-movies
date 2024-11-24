@@ -5,6 +5,8 @@ requirements for managing access and permissions effectively."
 Set Up Information:
 step 1: npm i (frontend folder)
 step 2: npm i (foverall folder)
+
+create account become an admin by changing your isadmin method to true -->(isAdmin:"True") , you can view the admin dashboard and perform all CRUD operations. 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Tech Stack:
 Frontend: 
