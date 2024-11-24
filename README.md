@@ -88,6 +88,7 @@ Middleware:
 >Centralized middleware ensures authentication and authorization for all sensitive endpoints.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Admin Dashboard:
+![image](https://github.com/user-attachments/assets/4f2958ad-47f8-4843-b63e-27eb59d1d35c)
 
 >The Admin Dashboard offers real-time insights into users, comments, and movies.
 >It enables full CRUD operations (Create, Read, Update, Delete) for movies, genres, and comments.
