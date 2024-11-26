@@ -1,4 +1,4 @@
-"My movies -  application is a comprehensive platform designed to manage users, movies, and genres with a fully integrated Role-Based Access Control (RBAC) system.It features secure and efficient user management,
+"MoviesBuzz" -  application is a comprehensive platform designed to manage users, movies, and genres with a fully integrated Role-Based Access Control (RBAC) system.It features secure and efficient user management,
 dynamic permissions, and a scalable design tailored for administrators. By blending creativity with a strong technical foundation, I ensured the application is intuitive and secure, fulfilling real-world
 requirements for managing access and permissions effectively."
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
